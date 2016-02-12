@@ -5,7 +5,7 @@ import rx.Observable.OnSubscribe;
 import rx.Subscriber;
 
 
-public class ObservableESubscriberNaMao_1 {
+public class ObservableESubscriberNaMao {
 	public static void main(String[] args) {
 		
 		Observable<String> observable = Observable.create(new OnSubscribe<String>() {
