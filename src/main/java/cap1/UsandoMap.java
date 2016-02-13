@@ -9,22 +9,13 @@ import rx.functions.Action1;
 public class UsandoMap {
 	public static void main(String[] args) {
 		
-		// Não precisamos nos preocupar em chamar onNext e onCompleted. No Just passamos 
-		// o que gostariamos de passar no onNext do Subscriber
+		Observable<Object> observable = Observable.just("Leonardo Cordeiro")
 		
-		Observable<String> observable = Observable.just("Leonado Cordeiro");
+		// Quero transformar e devolver hashCode
 		
-		// Subscribe recebe 3 actions (onNext, onError e onCompleted)
-		observable.subscribe(new Action1<String>() {
-
-			@Override
-			public void call(String nome) {
-				System.out.println("Nome: " + nome);
-			} 
-			
-		});
+		// Recebo String e devolvo Integer (por isso Observable de Object)
+		.map(s -> s + " - Lindão!");
 		
-		// Com Java 8
 		observable.subscribe(System.out::println);
 		
 	}
