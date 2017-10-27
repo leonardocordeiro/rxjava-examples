@@ -18,5 +18,10 @@ public class UsandoMapComTiposDiferentes {
 		
 		observable.subscribe(System.out::println);
 		
+		//flatmap transforma varios itens em um unico observable (flat = achatado)
+		// flatten == pegar varias colecoes e juntar em uma só
+		// flatmap = map + flatten
+
+		
 	}
 }
